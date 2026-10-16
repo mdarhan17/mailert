@@ -1,4 +1,5 @@
-﻿import AuthWorkspace from "./components/AuthWorkspace";
+﻿import MailertUpgrade from "./components/MailertUpgrade";
+import AuthWorkspace from "./components/AuthWorkspace";
 import "./styles/polish.css";
 import "./App.css";
 import RiskResults from "./components/RiskResults";
@@ -16,6 +17,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import "./styles/lightTheme.css";
 const features = [
   {
     icon: <Brain size={28} />,
@@ -84,6 +86,7 @@ function App() {
 
         <nav className="nav-links" aria-label="Main navigation">
           <a href="#features">Features</a>
+          <a href="#trust-center">Safety Hub</a>
           <a href="#how">How It Works</a>
           <a href="#scanner">Scanner</a>
           <a href="#contact">Contact</a>
@@ -341,6 +344,7 @@ function App() {
         <EmailScanner />
         <RiskResults />
         <AuthWorkspace />
+        <MailertUpgrade />
       </main>
 
       <footer id="contact" className="footer glass">
@@ -351,6 +355,7 @@ function App() {
 
         <div className="footer-links">
           <a href="#features">Features</a>
+          <a href="#trust-center">Safety Hub</a>
           <a href="#how">How It Works</a>
           <a href="#scanner">Scanner</a>
         </div>
@@ -362,6 +367,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

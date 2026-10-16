@@ -1,0 +1,77 @@
+﻿/* Mailert Creator Safety Hub. The variables also support dark mode. */
+html[data-theme="light"] {
+  --mu-ink: #132838; --mu-sub: #5d7282; --mu-card: rgba(255,255,255,.82);
+  --mu-border: rgba(90,134,150,.18); --mu-accent: #118f85;
+  --mu-shadow: 0 18px 54px rgba(38,81,110,.09);
+}
+html[data-theme="dark"] {
+  --mu-ink: #f4fbff; --mu-sub: #a3b9cc; --mu-card: rgba(255,255,255,.055);
+  --mu-border: rgba(165,208,235,.16); --mu-accent: #72e8cf;
+  --mu-shadow: 0 18px 55px rgba(0,0,0,.2);
+}
+.mu-section { max-width: 1280px; margin: 120px auto 0; scroll-margin-top: 125px; color: var(--mu-ink); }
+.mu-section-heading { max-width: 790px; margin-bottom: 33px; }
+.mu-eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: .74rem; color: var(--mu-accent); font-weight: 800; letter-spacing: .12em; }
+.mu-section-heading h2 { font-size: clamp(2.3rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.06em; margin: 17px 0; }
+.mu-section-heading h2 span { background: linear-gradient(110deg,#148e83,#3789c7); background-clip: text; color: transparent; }
+.mu-section-heading p, .mu-title-row > p, .mu-story-detail > p, .mu-checklist-card > p, .mu-faq-card > p { color: var(--mu-sub); line-height: 1.8; }
+.mu-trust-strips { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; margin-bottom:68px; }
+.mu-trust-strips > div, .mu-story-choice, .mu-story-detail, .mu-checklist-card, .mu-faq-card {
+  border:1px solid var(--mu-border); background:var(--mu-card); box-shadow:var(--mu-shadow);
+  backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-radius:22px;
+}
+.mu-trust-strips > div { padding:22px; display:grid; align-content:center; gap:8px; }
+.mu-trust-strips svg { color:var(--mu-accent); }
+.mu-trust-strips strong { font-size:.94rem; }
+.mu-trust-strips span { font-size:.78rem; color:var(--mu-sub); }
+.mu-title-row { display:flex; align-items:end; justify-content:space-between; gap:25px; margin-bottom:21px; }
+.mu-title-row h3 { font-size:clamp(1.6rem,2.4vw,2.3rem); letter-spacing:-.045em; margin:13px 0 0; }
+.mu-title-row > p { max-width:310px; font-size:.89rem; margin:0; }
+.mu-stories { display:grid; grid-template-columns:.88fr 1.12fr; gap:20px; }
+.mu-story-list { display:flex; flex-direction:column; gap:12px; }
+.mu-story-choice { padding:21px; width:100%; text-align:left; color:var(--mu-ink); display:flex; align-items:center; gap:14px; cursor:pointer; transition:transform .23s,border-color .23s,box-shadow .23s; }
+.mu-story-choice:hover { transform:translateX(5px); border-color:var(--mu-accent); }
+.mu-story-choice.is-active { border-color:var(--mu-accent); box-shadow:0 10px 34px rgba(21,151,138,.12); }
+.mu-story-icon { display:grid; place-items:center; width:47px; height:47px; flex-shrink:0; border-radius:14px; color:var(--mu-accent); background:rgba(35,185,165,.1); }
+.mu-story-choice > span:nth-child(2) { flex:1; display:grid; gap:5px; }
+.mu-story-choice strong { font-size:.96rem; }
+.mu-story-choice small { color:var(--mu-sub); font-size:.78rem; line-height:1.55; }
+.mu-story-choice > svg:last-child { color:var(--mu-accent); }
+.mu-story-detail { padding:31px; background: linear-gradient(135deg, rgba(34,180,165,.08), transparent 70%), var(--mu-card); }
+.mu-detail-head, .mu-card-label { display:flex; align-items:center; gap:10px; color:var(--mu-accent); font-size:.72rem; font-weight:800; letter-spacing:.1em; }
+.mu-story-detail h3 { font-size:1.8rem; letter-spacing:-.04em; margin:18px 0 6px; }
+.mu-story-detail > p { font-size:.92rem; margin:0 0 20px; }
+.mu-signal-list { display:grid; gap:8px; }
+.mu-signal-list div { padding:12px 14px; border:1px solid var(--mu-border); border-radius:11px; display:flex; align-items:center; gap:13px; font-size:.9rem; }
+.mu-signal-list span { color:var(--mu-accent); font-size:.7rem; font-weight:800; }
+.mu-next-action { display:flex; align-items:start; gap:11px; background:rgba(28,174,151,.09); border-radius:12px; padding:15px; margin-top:19px; font-size:.86rem; line-height:1.65; }
+.mu-next-action svg { color:var(--mu-accent); flex-shrink:0; }
+.mu-educational-note { display:block; margin-top:13px; color:var(--mu-sub); font-size:.73rem; }
+.mu-lower-grid { margin-top:25px; display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start; }
+.mu-checklist-card,.mu-faq-card { padding:28px; }
+.mu-checklist-card h3,.mu-faq-card h3 { font-size:1.5rem; letter-spacing:-.035em; margin:18px 0 6px; }
+.mu-checklist-card > p,.mu-faq-card > p { font-size:.88rem; margin:0 0 23px; }
+.mu-check-progress { height:8px; border-radius:99px; background:rgba(118,165,166,.15); overflow:hidden; }
+.mu-check-progress div { height:100%; border-radius:inherit; background:linear-gradient(90deg,#17a994,#5aafe1); transition:width .3s; }
+.mu-check-count { display:block; margin:9px 0 17px; color:var(--mu-sub); font-size:.78rem; }
+.mu-check-items { display:grid; gap:9px; }
+.mu-check-items label { display:flex; align-items:start; gap:12px; padding:12px; border:1px solid var(--mu-border); border-radius:12px; cursor:pointer; font-size:.87rem; line-height:1.6; }
+.mu-check-items label.checked { background:rgba(30,174,145,.08); }
+.mu-check-items input { accent-color:#139e90; width:17px; height:17px; margin-top:3px; flex-shrink:0; }
+.mu-copy-button,.mu-try-link { display:inline-flex; justify-content:center; align-items:center; gap:9px; color:#fff; font-weight:750; border:0; cursor:pointer; background:linear-gradient(120deg,#129e8e,#236db5); border-radius:12px; padding:13px 19px; margin-top:21px; transition:transform .22s,box-shadow .22s; }
+.mu-copy-button:hover,.mu-try-link:hover { transform:translateY(-3px); box-shadow:0 11px 28px rgba(16,116,142,.2); }
+.mu-faq-list { border-top:1px solid var(--mu-border); }
+.mu-faq-item { border-bottom:1px solid var(--mu-border); }
+.mu-faq-item button { background:transparent; color:var(--mu-ink); border:0; width:100%; padding:19px 0; font-size:.93rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px; text-align:left; }
+.mu-faq-item button svg { color:var(--mu-accent); flex-shrink:0; transition:transform .2s; }
+.mu-faq-item button svg.open { transform:rotate(180deg); }
+.mu-faq-item p { margin:0 0 18px; color:var(--mu-sub); font-size:.87rem; line-height:1.7; }
+.mu-scroll-progress { z-index:1000; height:3px; background:linear-gradient(90deg,#1fae9b,#3f98d9); position:fixed; left:0; top:0; transition:width .1s linear; pointer-events:none; }
+.mu-floating-tools { position:fixed; z-index:150; bottom:22px; right:22px; display:flex; gap:8px; align-items:center; }
+.mu-theme-button,.mu-top-button { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:12px 15px; border-radius:999px; background:var(--mu-card); color:var(--mu-ink); border:1px solid var(--mu-border); box-shadow:0 8px 30px rgba(21,65,86,.14); backdrop-filter:blur(22px); cursor:pointer; font-weight:750; transition:transform .2s; }
+.mu-theme-button:hover,.mu-top-button:hover { transform:translateY(-3px); }
+.mu-top-button { padding:12px; }
+.mu-section button:focus-visible,.mu-floating-tools button:focus-visible { outline:2px solid #159f95; outline-offset:3px; }
+@media(max-width:900px) { .mu-stories,.mu-lower-grid { grid-template-columns:1fr; } }
+@media(max-width:680px) { .mu-section { margin-top:90px; } .mu-trust-strips { grid-template-columns:1fr; gap:10px; margin-bottom:50px; } .mu-title-row { display:block; } .mu-title-row > p { margin-top:12px; } .mu-story-detail,.mu-checklist-card,.mu-faq-card { padding:20px; } .mu-floating-tools { right:12px; bottom:12px; } }
+@media(prefers-reduced-motion:reduce) { .mu-section *, .mu-floating-tools * { animation:none!important; transition:none!important; } }
