@@ -1,0 +1,188 @@
+﻿/* Phase 2.4 — Mailert premium visual refinement */
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  color: #061d2a;
+  background: #88f5da;
+}
+
+:focus-visible {
+  outline: 2px solid #80f0d7;
+  outline-offset: 3px;
+}
+
+.page-shell {
+  background:
+    radial-gradient(ellipse at 10% 3%,
+      rgba(56,158,162,.2),transparent 33%),
+    radial-gradient(ellipse at 95% 30%,
+      rgba(58,117,202,.17),transparent 34%),
+    linear-gradient(140deg,#060f1b,#0a1728 55%,#070f1a);
+}
+
+.navbar {
+  box-shadow:
+    0 12px 45px rgba(0,0,0,.22),
+    inset 0 1px rgba(255,255,255,.1);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  height: 2px;
+  bottom: -7px;
+  background: linear-gradient(90deg,#6ae7cc,#79c6fc);
+  border-radius: 3px;
+  transition: right .24s ease;
+}
+
+.nav-links a:hover:after {
+  right: 0;
+}
+
+.hero-right .dashboard-card {
+  border-color: rgba(118,235,211,.2);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.28),
+    inset 0 1px rgba(255,255,255,.07);
+}
+
+.stat-card,
+.feature-card,
+.step-card,
+.scanner-glass,
+.risk-ui-glass {
+  position: relative;
+}
+
+.stat-card,
+.feature-card,
+.step-card {
+  overflow: hidden;
+}
+
+.stat-card:before,
+.feature-card:before,
+.step-card:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(133,248,219,.9),
+    transparent
+  );
+  transition: opacity .3s;
+}
+
+.stat-card:hover:before,
+.feature-card:hover:before,
+.step-card:hover:before {
+  opacity: 1;
+}
+
+.feature-icon {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(-4deg) scale(1.07);
+  box-shadow: 0 10px 25px rgba(45,207,187,.12);
+}
+
+.feature-bottom svg {
+  transition: transform .25s;
+}
+
+.feature-card:hover .feature-bottom svg {
+  transform: translateX(5px);
+}
+
+.btn-primary,
+.scanner-main-button,
+.risk-ui-copy {
+  background-size: 170% 170%;
+  transition:
+    transform .3s,
+    box-shadow .3s,
+    background-position .3s;
+}
+
+.btn-primary:hover,
+.scanner-main-button:hover,
+.risk-ui-copy:hover {
+  background-position: 100% 50%;
+}
+
+.scanner-field input:hover,
+.scanner-field textarea:hover {
+  border-color: rgba(144,224,216,.43);
+}
+
+.scanner-glass:hover,
+.risk-ui-glass:hover {
+  border-color: rgba(130,206,227,.24);
+}
+
+.risk-ui-finding,
+.risk-ui-guidance-step {
+  transition: border-color .22s, background .22s;
+}
+
+.risk-ui-finding:hover,
+.risk-ui-guidance-step:hover {
+  border-color: rgba(130,206,227,.19);
+  background: rgba(31,65,82,.23);
+}
+
+.navbar,
+.ma-glass,
+.scanner-glass,
+.risk-ui-glass {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+@media (max-width:580px) {
+  .nav-links a:after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .stat-card:before,
+  .feature-card:before,
+  .step-card:before,
+  .feature-icon,
+  .feature-bottom svg,
+  .btn-primary,
+  .scanner-main-button,
+  .risk-ui-copy,
+  .risk-ui-finding,
+  .risk-ui-guidance-step {
+    transition: none;
+  }
+}

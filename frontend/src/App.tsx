@@ -1,4 +1,6 @@
-﻿import "./App.css";
+﻿import AuthWorkspace from "./components/AuthWorkspace";
+import "./styles/polish.css";
+import "./App.css";
 import RiskResults from "./components/RiskResults";
 import EmailScanner from "./components/EmailScanner";
 import { motion } from "framer-motion";
@@ -88,13 +90,7 @@ function App() {
         </nav>
 
         <div className="nav-actions">
-          <button
-            className="btn btn-secondary"
-            disabled
-            title="Login will be added in Phase 3"
-          >
-            Login (soon)
-          </button>
+          <a className="btn btn-secondary" href="#account">Login preview</a>
           <a className="btn btn-primary" href="#features">
             Explore <ArrowRight size={16} />
           </a>
@@ -344,6 +340,7 @@ function App() {
 
         <EmailScanner />
         <RiskResults />
+        <AuthWorkspace />
       </main>
 
       <footer id="contact" className="footer glass">
@@ -365,5 +362,6 @@ function App() {
 }
 
 export default App;
+
 
 
