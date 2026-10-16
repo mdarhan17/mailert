@@ -1,4 +1,5 @@
 ﻿import "./App.css";
+import EmailScanner from "./components/EmailScanner";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
@@ -340,22 +341,7 @@ function App() {
           </div>
         </section>
 
-        <section id="scanner" className="cta-section glass">
-          <div className="cta-left">
-            <span className="section-badge">COMING NEXT</span>
-            <h2>Know the risk before you click.</h2>
-            <p>
-              Our email scanner will let you analyze suspicious
-              messages and review clear security explanations.
-            </p>
-          </div>
-
-          <div className="cta-right">
-            <span className="coming-soon">
-              Scanner UI — Coming in Phase 2.2
-            </span>
-          </div>
-        </section>
+        <EmailScanner />
       </main>
 
       <footer id="contact" className="footer glass">
@@ -377,3 +363,4 @@ function App() {
 }
 
 export default App;
+
