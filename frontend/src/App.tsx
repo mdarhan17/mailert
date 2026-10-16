@@ -1,4 +1,5 @@
 ﻿import "./App.css";
+import RiskResults from "./components/RiskResults";
 import EmailScanner from "./components/EmailScanner";
 import { motion } from "framer-motion";
 import {
@@ -342,6 +343,7 @@ function App() {
         </section>
 
         <EmailScanner />
+        <RiskResults />
       </main>
 
       <footer id="contact" className="footer glass">
@@ -363,4 +365,5 @@ function App() {
 }
 
 export default App;
+
 
