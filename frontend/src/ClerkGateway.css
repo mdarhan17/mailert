@@ -1,0 +1,58 @@
+﻿.m3-access-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px; padding:10px max(20px,calc((100vw - 1280px)/2));
+  background:#effaf7; color:#245365; border-bottom:1px solid #d7ece9;
+}
+.m3-access-bar>span {
+  display:flex; gap:8px; align-items:center;
+  letter-spacing:.1em; font-weight:800; font-size:.66rem;
+}
+.m3-links { display:flex; gap:15px; align-items:center; }
+.m3-links a { color:#226274; text-decoration:none; font-weight:700; font-size:.83rem; }
+.m3-links .m3-action {
+  display:inline-flex; gap:7px; align-items:center;
+  background:#0f9f8d; color:#fff; border-radius:10px; padding:9px 13px;
+}
+.m3-auth {
+  min-height:100vh; color:#1b4050;
+  background:radial-gradient(circle at 8% 20%,#d7f6ed,transparent 40%),
+  radial-gradient(circle at 90% 80%,#e1ecff,transparent 42%),
+  linear-gradient(130deg,#fbfdff,#eff6f9);
+  padding:24px max(20px,calc((100vw - 1280px)/2));
+}
+.m3-header { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.m3-header a { text-decoration:none; }
+.m3-logo { display:flex; align-items:center; gap:7px; font-size:1.45rem; font-weight:850; letter-spacing:-.055em; color:#164a56; }
+.m3-logo svg,.m3-logo span { color:#0d9b89; }
+.m3-home { color:#597886; font-size:.86rem; }
+.m3-home:hover { color:#088e81; }
+.m3-auth-layout { min-height:calc(100vh - 115px); max-width:1150px; margin:0 auto; display:grid; grid-template-columns:1fr 440px; gap:65px; align-items:center; }
+.m3-intro h1 { font-size:clamp(3rem,5vw,5rem); line-height:1.07; letter-spacing:-.065em; margin:20px 0; }
+.m3-intro h1 span { background:linear-gradient(110deg,#0f988a,#438bc6); background-clip:text; color:transparent; }
+.m3-intro>p { max-width:500px; color:#607d8e; line-height:1.8; margin-bottom:30px; }
+.m3-eyebrow { display:flex; align-items:center; gap:8px; color:#118c7c; font-size:.72rem; font-weight:800; letter-spacing:.12em; }
+.m3-benefit { display:flex; align-items:center; gap:12px; color:#456d79; padding:15px 0; border-top:1px solid #dceae9; font-size:.9rem; }
+.m3-benefit svg { color:#0c9d8e; }
+.m3-form { padding:24px 12px; display:flex; flex-direction:column; align-items:center; min-width:0; border-radius:26px; background:rgba(255,255,255,.65); border:1px solid #fff; box-shadow:0 25px 75px rgba(28,96,113,.12); backdrop-filter:blur(18px); }
+.m3-form-title { display:flex; flex-direction:column; align-items:center; gap:6px; margin-bottom:22px; }
+.m3-form-title strong { font-size:1.2rem; }
+.m3-form-title small { color:#76909e; }
+.m3-account { max-width:690px; margin:70px auto; padding:40px; border:1px solid #e1f0ef; border-radius:28px; background:rgba(255,255,255,.8); box-shadow:0 22px 60px rgba(25,96,115,.09); }
+.m3-account h1 { margin:20px 0 8px; font-size:clamp(2rem,5vw,3rem); }
+.m3-account>p { color:#64818c; overflow-wrap:anywhere; }
+.m3-account-top { display:flex; align-items:center; justify-content:space-between; }
+.m3-avatar { width:58px; height:58px; border-radius:18px; object-fit:cover; }
+.m3-account-status { display:inline-flex; gap:9px; align-items:center; margin:26px 0; padding:11px 14px; border-radius:12px; color:#167a65; background:#e3f9ee; font-size:.85rem; font-weight:750; }
+.m3-account-info { padding:20px; background:#f1f8fa; border-radius:15px; color:#607987; line-height:1.7; }
+.m3-account-cta { display:inline-flex; gap:9px; align-items:center; margin-top:20px; padding:13px 18px; border-radius:12px; background:#109a8c; color:white; text-decoration:none; font-weight:750; }
+.m3-account-cta:hover,.m3-links .m3-action:hover { background:#087e73; }
+.m3-auth a:focus-visible,.m3-access-bar a:focus-visible { outline:2px solid #138a7e; outline-offset:3px; }
+@media(max-width:850px) {
+  .m3-auth-layout { grid-template-columns:1fr; gap:25px; padding:65px 0; }
+  .m3-form { max-width:480px; }
+}
+@media(max-width:500px) {
+  .m3-access-bar { flex-wrap:wrap; }
+  .m3-account { padding:24px; }
+  .m3-form { padding:15px 4px; }
+}
