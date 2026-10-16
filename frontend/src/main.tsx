@@ -1,25 +1,25 @@
 ﻿import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/react";
-import ClerkGateway from "./ClerkGateway";
+import ClerkEntry from "./ClerkEntry";
 import "./index.css";
 
-const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+const key = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-if (!publishableKey) {
-  throw new Error("Missing VITE_CLERK_PUBLISHABLE_KEY in .env.local");
+if (!key) {
+  throw new Error("Clerk Publishable Key is missing.");
 }
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ClerkProvider
-      publishableKey={publishableKey}
+      publishableKey={key}
       signInUrl="/sign-in"
       signUpUrl="/sign-up"
       signInFallbackRedirectUrl="/account"
       signUpFallbackRedirectUrl="/account"
     >
-      <ClerkGateway />
+      <ClerkEntry />
     </ClerkProvider>
   </StrictMode>
 );

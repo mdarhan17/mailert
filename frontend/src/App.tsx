@@ -1,4 +1,5 @@
-﻿import MailertUpgrade from "./components/MailertUpgrade";
+﻿import AuthNavActions from "./components/AuthNavActions";
+import MailertUpgrade from "./components/MailertUpgrade";
 import AuthWorkspace from "./components/AuthWorkspace";
 import "./styles/polish.css";
 import "./App.css";
@@ -92,12 +93,7 @@ function App() {
           <a href="#contact">Contact</a>
         </nav>
 
-        <div className="nav-actions">
-          <a className="btn btn-secondary" href="#account">Login preview</a>
-          <a className="btn btn-primary" href="#features">
-            Explore <ArrowRight size={16} />
-          </a>
-        </div>
+        <div className="nav-actions"><AuthNavActions /></div>
       </header>
 
       <main id="home">
@@ -367,6 +363,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
